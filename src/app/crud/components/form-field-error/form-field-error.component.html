@@ -1,0 +1,5 @@
+<div>
+    <div *ngIf="control?.hasError('required')">This field is required</div>
+    <div *ngIf="control?.hasError('minlength')">Min required length is {{ control?.errors?.['minlength'].requiredLength }}</div>
+    <div *ngIf="control?.hasError('maxlength')">Max required length is {{ control?.errors?.['maxlength'].requiredLength }}</div>
+</div>

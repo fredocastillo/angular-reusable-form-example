@@ -1,0 +1,28 @@
+<form [formGroup]="form">
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name" type="text" [errorStateMatcher]="errorMatcher">
+        <mat-error>
+            <app-form-field-error [control]="name"></app-form-field-error>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Type</mat-label>
+        <input matInput placeholder="Type" formControlName="type" type="text" [errorStateMatcher]="errorMatcher">
+        <mat-error>
+            <app-form-field-error [control]="type"></app-form-field-error>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="Date" formControlName="date" [errorStateMatcher]="errorMatcher">
+        <mat-error>
+            <app-form-field-error [control]="date"></app-form-field-error>
+        </mat-error>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+</form>
+
+
+
